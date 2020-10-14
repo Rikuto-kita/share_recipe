@@ -1,0 +1,33 @@
+<%= render "shared/header" %>
+<div class = 'main'>
+
+  
+<% @recipe.each do |recipe|%>
+  <ul class='recipe-lists'>
+    <li class='list'>
+      <%= link_to recipe_path (recipe.id) do %>
+        <div class='recipe-img-content'>
+          <%= image_tag recipe.image , class:"recipe-img"%>
+        </div>
+        <div class='recipe-info'>
+          <h3 class='recipe-name'>
+          <%= recipe.name %>
+          </h3>
+        <div class='recipe-outline'>
+          <span><%= recipe.outline %>
+        </div>
+        </div>
+    </li>
+      <% end %>
+  </ul>
+<% end %>
+
+　 <%#投稿ボタン%>
+  <%=link_to new_recipe_path do %>
+    <div class='recipe-btn'>
+      <span class='recipe-btn-text'>レシピを投稿する</span>
+      <%= image_tag 'recipe.png' , size: '185x50' ,class: "recipe-btn-icon" %>
+    </div>
+  <%end%>
+
+</div>
