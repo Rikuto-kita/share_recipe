@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   end
 
   def delete
+    
   end
 
   def show

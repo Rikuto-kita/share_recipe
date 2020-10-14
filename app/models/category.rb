@@ -7,7 +7,7 @@ class Category < ActiveHash::Base
     { id: 5, name: 'フレンチ' },
     { id: 6, name: 'エスニック' },
     { id: 7, name: '揚げ物' },
-    { id: 8, name: '煮物' }
+    { id: 8, name: '煮物' },
     { id: 9, name: '鍋' },
     { id: 10, name: '粉物' },
     { id: 11, name: '野菜料理'},

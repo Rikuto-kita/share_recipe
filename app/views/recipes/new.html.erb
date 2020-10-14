@@ -1,0 +1,56 @@
+<div class="items-sell-main">
+  <h2 class = 'recipe-title'>レシピ情報の入力</h2>
+<%= form_with model: @recipe,url: recipes_path, local: true do |f| %>
+
+<%= render 'shared/error_messages', model: f.object %>
+
+<%#入力欄%>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        料理写真
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"recipe-image" %>
+      </div>
+    </div>
+
+    <div class="new-recipe">
+      <div class="weight-bold-text">
+        料理名
+      </div>
+      <%= f.text_field :name, class:"recipe-text", id:"recipe-name", placeholder:"（必須 40文字まで)", maxlength:"40" %>
+      <div class="recipe-explain">
+        <div class="weight-bold-text">
+          料理の説明
+        </div>
+        <%= f.text_area :outline, class:"recipe-text", id:"recipe-info", placeholder:"（1,000文字まで）例：旬の魚を使った煮込み料理で簡単にできます。" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+
+    <div class="recipe-detail">
+      <div class="form">
+        <div class="weight-bold-text">
+          カテゴリー選択
+        </div>
+        <%= f.collection_select(:category_id, Category.all ,:id , :name, {}, {class:"category-select"}) %>
+         <div class="weight-bold-text">
+          材料
+        </div>
+       <%= f.text_area :foodstuff, class:"recipe-text", id:"recipe-info", placeholder:"（例）魚の切り身　３００g、 
+       ネギ１本" ,rows:"40" ,maxlength:"1000" %>
+        <div class="weight-bold-text">
+          料理手順
+        </div>
+       <%= f.text_area :cook, class:"recipe-text", id:"recipe-info", placeholder:"（例）手順１：〜〜   
+       手順２：〜〜" ,rows:"40" ,maxlength:"1500" %>
+      </div>
+    </div>
+    
+
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する" ,class:"sell-btn" %>
+    </div>
+<%end%>
