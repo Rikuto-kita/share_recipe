@@ -40,7 +40,7 @@
 
 .contents_row{
   background-color:#faebd7 ;
-
+  overflow: auto;
 }
 
 .recipe-lists{
