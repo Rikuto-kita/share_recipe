@@ -2,11 +2,11 @@
 
 <div class="recipe-new-main">
   <h2 class = 'recipe-title'>レシピ情報の入力</h2>
-    <%= form_with model: @recipe,url: recipes_path, local: true do |f| %>
+<%= form_with model: @recipe,url: recipe_path, local: true do |f| %>
 
-    <%= render 'shared/error_messages', model: f.object %>
+<%= render 'shared/error_messages', model: f.object %>
 
-  <%#入力欄%>
+<%#入力欄%>
   <div class = "recipe-upload">
 
       <div class="recipe-main-up">
@@ -61,17 +61,17 @@
               料理手順
             </div>
             <%= f.text_area :cook, class:"recipe-text-bottom", id:"recipe-info", placeholder:"（例）手順１：〜〜    
-              手順２：〜〜" ,rows:"40" ,maxlength:"1500" %>
+        手順２：〜〜" ,rows:"40" ,maxlength:"1500" %>
+            </div>
           </div>
+
+        
 
   </div>
 
-       <div class="sell-btn-contents">
-        <%= f.submit "投稿する" , class:"sell-btn" %>
-      </div>
-       
 
-</div>
 
-      
-    <% end %>
+    <div class="sell-btn-contents">
+      <%= f.submit "変更する" ,class:"sell-btn" %>
+    </div>
+<%end%>

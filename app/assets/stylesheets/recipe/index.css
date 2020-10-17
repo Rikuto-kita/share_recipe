@@ -1,0 +1,63 @@
+
+.main{
+  width:100vw;
+  height: 100vh;
+  background-color:#faebd7 ;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.top-image{
+  width: 100vw;
+  height: 40vh;
+  background-image: url("https://www.fujitsu.com/jp/Images/opinion2019-7-2_1280%C3%97800_tcm102-4446771.jpg");
+  background-size: 78% auto;
+  padding: 5vh 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.service-title {
+  font-size: 8vh;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.service-explain {
+  font-size: 2.5vh;
+  line-height: 40px;
+  color: #fff;
+}
+
+.recipe{
+    width:100vw;
+    display:flex;
+    flex-wrap: wrap;
+    background-color:#faebd7 ;
+}
+
+.contents_row{
+  background-color:#faebd7 ;
+
+}
+
+.recipe-lists{
+  list-style: none;
+  padding:20px ;
+}
+
+.recipe-img{
+  width: 300px;
+  height:200px ;
+}
+
+.recipe-name{
+  width: 300px;
+}
+
+.recipe-outline{
+  width: 300px;
+  
+}

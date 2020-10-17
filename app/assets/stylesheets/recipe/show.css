@@ -1,0 +1,77 @@
+.recipe-show{
+  height: 90vh;
+  width: 100vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  background-color: #faebd7;
+}
+
+.recipe-left{
+  padding: 50px 100px;
+}
+
+.recipe-box{
+  display:flex ;
+}
+
+.name{
+  font-size: 40px;
+  font-weight:900;
+  padding-top: 10px;
+}
+
+.recipe-category{
+  font-size: 30px;
+  padding-left: 150px;
+  padding-top: 20px;
+}
+
+.recipe-box-img{
+  height: 300px;
+  width: 400px;
+}
+
+.recipe-explain-box{
+  padding-top: 20px;
+}
+
+.recipe-right{
+  padding: 50px 200px;
+}
+
+.recipe-bottom{
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  background-color: #faebd7;
+  border-top: 5px solid #ff8c00;
+}
+
+
+.recipe-red-btn{
+  font-size: 40px;
+  color: red;
+}
+
+.or-text{
+  padding-left: 90px;
+}
+
+.recipe-destroy{
+  font-size: 30px;
+  padding-left: 70px;
+  color: blue;
+}
+
+.none{
+  width: 100vh;
+  height: 30vh;
+}
+
+.cook_user_name{
+  padding-top: 50px;
+  width: 300px;
+font-size:30px;
+}
+

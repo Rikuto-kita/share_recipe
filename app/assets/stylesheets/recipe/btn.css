@@ -1,8 +1,9 @@
 .recipe-btn {
   width: 120px;
   text-align: center;
-  border: yellow solid 4px;
+  border: #ff8c00 solid 4px;
   border-radius: 4%　;
+  background-color:#faebd7 ;
   bottom: 32px;
   right: 32px;
   position: fixed;

@@ -1,18 +1,9 @@
 <%= render  "shared/header" %>
-<div class = 'main'>
 
-  <div class = "top-image">
-    <h2 class='service-title'>
-     毎日の食卓を豊に
-    </h2>
-    <p class = "service-explain">
-    share recipeはレシピを共有するアプリです。
-    </p>
-    <p class='service-explain'>
-      毎日の食卓を豊にしましょう。
-    </p>
-  </div>
 
+
+<div class="contents_row">
+  <p><%= @name %>さんの投稿一覧</p>
   <div class = "recipe"> 
     <% @recipes.each do |recipe|%>
       <ul class='recipe-lists'>
@@ -34,13 +25,4 @@
       </ul>
     <% end %>
   </div>
-
-　 <%#投稿ボタン%>
-  <%=link_to new_recipe_path do %>
-    <div class='recipe-btn'>
-      <span class='recipe-btn-text'>レシピを投稿する</span>
-      <%= image_tag 'recipe.png' , size: '185x50' ,class: "recipe-btn-icon" %>
-    </div>
-  <%end%>
-
 </div>

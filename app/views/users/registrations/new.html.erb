@@ -1,40 +1,59 @@
-<h2>新規登録</h2>
+<div class = "registrations-all">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :ネーム %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "email" %>
-  </div>
-
-<div class="field">
-    <%= f.label :プロフィール %><br />
-    <%= f.text_area :profile, autofocus: true, autocomplete: "email" %>
+  <div class ="registrations-img">
+    <%=image_tag "share.png",class:"signup-img"%>
   </div>
 
 
-  <div class="field">
-    <%= f.label :メール %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :パスワード %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %>文字以上 半角英数字）</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+    <div class = "registrations">
 
-  <div class="field">
-    <%= f.label :パスワード（確認用） %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+          <div class = "sign-up-title">
+              <h2>新規登録</h2>
+          </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+          <div class ="sign-up-list" >
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= render "shared/error_messages", model: f.object %>
 
-<%= render "users/shared/links" %>
+              <div class="field">
+                <%= f.label :ネーム %><br />
+                <%= f.text_field :name,class:"signup-text", autofocus: true, autocomplete: "email" %>
+              </div>
+
+            <div class="field">
+                <%= f.label :プロフィール %><br />
+                <%= f.text_area :profile, class:"signup-text",autofocus: true, autocomplete: "email" %>
+              </div>
+
+
+              <div class="field">
+                <%= f.label :メール %><br />
+                <%= f.email_field :email,class:"signup-text", autofocus: true, autocomplete: "email" %>
+              </div>
+
+              <div class="field">
+                <%= f.label :パスワード %>
+                <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %>文字以上 半角英数字）</em>
+                <% end %><br />
+                <%= f.password_field :password,class:"signup-text", autocomplete: "new-password" %>
+              </div>
+
+              <div class="field">
+                <%= f.label :パスワード（確認用） %><br />
+                <%= f.password_field :password_confirmation, class:"signup-text",autocomplete: "new-password" %>
+              </div>
+
+              <div class="actions">
+                <%= f.submit "登録",class:"signup-btn" %>
+              </div>
+            <% end %>
+          </div>
+
+        <div class = "sign-up-bottom">
+        <%= render "users/shared/links" %>
+        </div>
+
+    </div>
+</div>
