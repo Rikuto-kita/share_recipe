@@ -13,6 +13,8 @@
 
 .recipe-box{
   display:flex ;
+  flex-direction:column-reverse;
+  justify-content: flex-start;
 }
 
 .name{
@@ -22,8 +24,7 @@
 }
 
 .recipe-category{
-  font-size: 30px;
-  padding-left: 150px;
+  font-size: 25px;
   padding-top: 20px;
 }
 

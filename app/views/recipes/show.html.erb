@@ -48,7 +48,7 @@
           <%else%>
           <div class ="cook_user_name">
         投稿者：
-          <%= link_to @recipe.user.name, "/users/#{current_user.id}", class: "user-show-name" %>
+          <%= link_to @recipe.user.name, "/users/#{@recipe.user.id}", class: "user-show-name" %>
         <div>
       <% end %>
     </div>
