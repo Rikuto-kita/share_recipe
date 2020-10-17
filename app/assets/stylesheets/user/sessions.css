@@ -1,0 +1,37 @@
+
+body{
+  background-color: #ff8c00;
+}
+
+.share-image{
+  padding-left: 20px;
+}
+
+.login-all{
+  display: flex;
+  justify-content:center;
+  position: absolute;
+  left: 450px;
+  top:300px ;
+  background-color: #faebd7;
+  border: black solid 4px;
+}
+
+
+.log-in{
+  padding: 50px;
+}
+
+.login-title{
+  padding: 50px;
+}
+
+.field{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.right-image{
+  display: flex;
+  justify-content:center;
+}

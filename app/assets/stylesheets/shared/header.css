@@ -1,0 +1,18 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.header{
+  background-color:#faebd7;
+  border-bottom: 5px solid #ff8c00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.lists-right{
+  list-style: none;
+}

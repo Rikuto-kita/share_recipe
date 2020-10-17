@@ -1,0 +1,58 @@
+
+ <%= render "shared/header" %>
+
+
+  <div class="recipe-show">
+
+    <div class="recipe-left">
+
+      <div class="recipe-box">
+        <div class="name">
+          <%= @recipe.name %>
+        </div>
+
+        <div class="recipe-category">
+          <span><%= @recipe.category.name %></span>
+        </div>
+      </div>
+
+    <div class='recipe-img-content'>
+      <%= image_tag @recipe.image ,class:"recipe-box-img" %>
+    </div>
+
+    <div class="recipe-explain-box">
+      <span><%= @recipe.outline %></span>
+    </div>
+  </div>
+
+  <div class="recipe-right">
+    <div class="recipe-foodstuff">
+    <h2>材料</h2>
+      <span><%= @recipe.foodstuff %></span>
+    </div>
+
+    <div class="recipe-cook">
+    <h2>作り方</h2>
+      <span><%= @recipe.cook %></span>
+    </div>
+  </div>
+</div>
+
+
+  <div class="recipe-bottom">
+    <div class="recipe-edit">
+      <%if user_signed_in? && current_user.id == @recipe.user_id %>
+          <%= link_to '商品の編集', edit_recipe_path  , method: :get, class: "recipe-red-btn" %>
+            <p class='or-text'>or</p>
+          <%= link_to '削除', recipe_path(@recipe), method: :delete, class:'recipe-destroy' %>
+          <%else%>
+          <div class ="cook_user_name">
+        投稿者：
+          <%= link_to @recipe.user.name, "/users/#{current_user.id}", class: "user-show-name" %>
+        <div>
+      <% end %>
+    </div>
+  </div>
+
+  
+ 
