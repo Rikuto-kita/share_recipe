@@ -59,4 +59,3 @@ gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 gem 'haml-rails'
 gem 'jquery-rails'
-
