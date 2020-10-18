@@ -18,9 +18,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @name = current_user.name
-    @profile = current_user.profile
-    @recipes = current_user.recipes
+    @recipes = @user.recipes
   end
 
   private
