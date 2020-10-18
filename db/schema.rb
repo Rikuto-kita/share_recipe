@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2020_10_18_034216) do
     t.text "foodstuff", null: false
     t.text "cook", null: false
     t.bigint "user_id", null: false
+    t.integer "likes_count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_recipes_on_user_id"
