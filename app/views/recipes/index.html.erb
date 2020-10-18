@@ -28,7 +28,10 @@
             <div class='recipe-outline'>
               <span><%= recipe.outline %>
             </div>
-            </div>
+          </div>
+           <div class="recipe-favorite">
+            <%= render partial: 'recipes/recipes', locals:{recipe: recipe} , as: :recipe %>
+          </div>
         </li>
           <% end %>
       </ul>
@@ -42,5 +45,7 @@
       <%= image_tag 'recipe.png' , size: '185x50' ,class: "recipe-btn-icon" %>
     </div>
   <%end%>
+
+  
 
 </div>
