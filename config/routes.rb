@@ -5,6 +5,10 @@ Rails.application.routes.draw do
  resources :recipes do
   post   '/like/:recipe_id' => 'likes#like',   as: 'like'
   delete '/like/:recipe_id' => 'likes#unlike', as: 'unlike'
+
+
+
  end
  
+
 end
