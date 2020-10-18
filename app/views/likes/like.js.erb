@@ -1,1 +1,1 @@
-$("<%= @id_name %>").html('<%= escape_javascript(render partial:"likes/like", locals: {recipe: recipe} ) %>');
+$("<%= @id_name %>").html('<%= escape_javascript(render("likes/like", recipe: @recipe  )) %>');

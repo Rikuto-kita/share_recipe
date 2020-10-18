@@ -7,6 +7,7 @@ class CreateRecipes < ActiveRecord::Migration[6.0]
       t.text :foodstuff,      null:false
       t.text :cook ,          null:false
       t.references :user,     null: false,foreign_key: true
+      t.integer :likes_count
       t.timestamps
     end
   end

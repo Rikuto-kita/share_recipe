@@ -34,12 +34,10 @@ ActiveRecord::Schema.define(version: 2020_10_18_034216) do
   end
 
   create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "recipe_id", null: false
+    t.integer "user_id"
+    t.integer "recipe_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["recipe_id"], name: "index_likes_on_recipe_id"
-    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "recipes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -49,6 +47,7 @@ ActiveRecord::Schema.define(version: 2020_10_18_034216) do
     t.text "foodstuff", null: false
     t.text "cook", null: false
     t.bigint "user_id", null: false
+    t.integer "likes_count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_recipes_on_user_id"
@@ -69,7 +68,5 @@ ActiveRecord::Schema.define(version: 2020_10_18_034216) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "likes", "recipes"
-  add_foreign_key "likes", "users"
   add_foreign_key "recipes", "users"
 end
