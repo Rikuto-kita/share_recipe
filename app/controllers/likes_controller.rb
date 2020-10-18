@@ -1,5 +1,9 @@
 class LikesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_variables
+
+  def index
+  end
 
   def like
     like = current_user.likes.new(recipe_id: @recipe.id)
