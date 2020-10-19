@@ -1,8 +1,13 @@
 <%= render  "shared/header" %>
 
 <div class = "user-profile">
+<div class ="name-profile">
 <h1><%= @user.name %>さん</h1>
 <%=@user.profile%>
+</div>
+<div class="users-iine">
+<%=link_to @user.name,likes_users_path%>
+</div>
 </div>
 
 

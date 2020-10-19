@@ -2,8 +2,6 @@ class LikesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_variables
 
-  def index
-  end
 
   def like
     like = current_user.likes.new(recipe_id: @recipe.id)
@@ -14,6 +12,8 @@ class LikesController < ApplicationController
     like = current_user.likes.find_by(recipe_id: @recipe.id)
     like.destroy
   end
+
+ 
 
   private
 
