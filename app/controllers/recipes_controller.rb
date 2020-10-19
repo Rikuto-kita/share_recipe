@@ -41,6 +41,13 @@ class RecipesController < ApplicationController
     end
   end
 
+  def likes
+    rikuto = Like.find_by(user_id: current_user.id)
+    if rikuto.present?
+    @recipes = Recipe.all.where(id: rikuto.recipe_id)
+    end 
+  end
+
   private
 
   def recipe_params

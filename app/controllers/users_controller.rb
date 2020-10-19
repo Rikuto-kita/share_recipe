@@ -19,12 +19,7 @@ class UsersController < ApplicationController
     @recipes = @user.recipes
   end
 
-  def likes
-    @user = User.find_by(params[:id])
-
-    likes = Like.where(user_id: current_user.id).pluck(:recipe_id)
-    @like_list = recipe.find(likes) 
-  end
+ 
 
   private
 
