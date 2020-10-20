@@ -42,10 +42,8 @@ class RecipesController < ApplicationController
   end
 
   def likes
-    rikuto = Like.find_by(user_id: current_user.id)
-    if rikuto.present?
-    @recipes = Recipe.all.where(id: rikuto.recipe_id)
-    end 
+    @user = current_user
+    @likes = Like.where(user_id: @user.id).all
   end
 
   private

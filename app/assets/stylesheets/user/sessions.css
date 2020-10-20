@@ -1,8 +1,8 @@
 
+
 body{
-  margin: 0px;
-  padding: 0px;
-  background-color: #faebd7;
+  background-color: #ff8c00;
+  margin: 0;
 }
 
 .share-image{
@@ -17,6 +17,7 @@ body{
   top:300px ;
   background-color: #faebd7;
   border: black solid 4px;
+  height: 300px;
 }
 
 
@@ -36,4 +37,10 @@ body{
 .right-image{
   display: flex;
   justify-content:center;
+}
+
+.session-actions{
+  position: absolute;
+  right: 50px;
+  bottom: 30px;
 }

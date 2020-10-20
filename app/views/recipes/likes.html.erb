@@ -1,7 +1,31 @@
+<%= render  "shared/header" %>
 
-<div class ="likes-list">
-  <%@recipes.each do |recipe|%>
-    <%=recipe.name%>
-    <%=recipe.outline%>
-  <%end%>
+
+
+
+  <div class="contents_row">
+  
+  <h3><%= @user.name %>さんのお気に入り一覧</h3>
+  <div class = "recipe"> 
+   <%@likes.each do |like|%>
+   <% recipe = Recipe.find(like.recipe_id) %>
+      <ul class='recipe-lists'>
+        <li class='list'>
+          <%= link_to recipe_path (recipe.id) do %>
+            <div class='recipe-img-content'>
+              <%= image_tag recipe.image , class:"recipe-img"%>
+            </div>
+            <div class='recipe-info'>
+              <h3 class='recipe-name'>
+              <%= recipe.name %>
+              </h3>
+            <div class='recipe-outline'>
+              <span><%= recipe.outline %>
+            </div>
+            </div>
+        </li>
+          <% end %>
+      </ul>
+    <% end %>
   </div>
+</div>
