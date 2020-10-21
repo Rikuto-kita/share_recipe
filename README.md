@@ -1,12 +1,14 @@
 # README
-<h1 align=“center”>share Recipe</h1>
--自炊をしている人向けのアプリ
--私の母親は、毎日の献立を考えるのに苦労していました。そして私自身も一人暮らしになり、自炊をする上で料理のレパートリーに悩むことがありました。そこで他の家庭で作られている料理のレシピを共有できるアプリがあれば、献立を考えなくて住むと考えこのアプリを作成しました。
--「今日は何食べよう」、「料理したいけど作り方がわからない」とお困りの方や「こんな料理あるよ」というレシピを共有したい方の<b>「レシピ共有アプリ」</b>です。
-- 作成期間 2020/10/13 ~ 2020/10/21
--Elastic IP アドレス:54.95.106.48
+<h1 align=“center”>Rails Connect</h1>
+- Ruby on Rails初学者向けの用語共有検索サイト
+- 私自身、自走力を身に付ける為に「調べて解決する」事に拘りました。一方で、検索しても見つからない、読んでも分からない、この事により数時間問題を解決出来ない場面を多々経験致しました。
+同期の方と話す中で、初学者悩む所は同じだと感じ、その負を解消したら良いのではとの思いから作成しました。
+- 「何を調べたら良いの？」、「このエラーを解決するには？」とお困りの初学者の方が、「参照すべきサイト」を最短距離で効率的に見つける事ができる<b>「情報共有検索サービス」</b>です。
+- こちらのサービスは、同様の経験をした有志の方々の投稿により、作りあげられている辞典になります。
+- 作成期間 2020/9/28 ~ 2020/10/7
+- https://rails-connect.com/
+ ![top_page](https://i.gyazo.com/ec902bbeb37996a96d1e9c9b74bebef9.png)
 <br>
-
 ---
 ## :paperclip: 主な使用言語
 ---
@@ -14,30 +16,22 @@
 <a><img src=“https://user-images.githubusercontent.com/39142850/71774548-731b2900-2fb4-11ea-99ba-565546c5acb4.png” height=“60px;” /></a> <!-- RubyOnRailsのロゴ -->
 <a><img src=“https://cdn.svgporn.com/logos/html-5.svg” height=“60px;” /></a> <!-- htmlのロゴ -->
 <a><img src=“https://cdn.svgporn.com/logos/css-3.svg” height=“60px;” /></a> <!-- cssのロゴ -->
+<a><img src=“https://cdn.svgporn.com/logos/javascript.svg” height=“60px” /></a> <!-- JavaScriptのロゴ -->
 <a><img src=“https://syncer.jp/storage/web/brand-logos/static/dst/github-logo-001.png” height=“60px;” /></a> <!-- GitHubのロゴ -->
+<a><img src=“https://www.docker.com/sites/default/files/d8/styles/role_icon/public/2019-07/Docker-Logo-White-RGB_Horizontal.png?itok=cFIHFZiP” height=“60px;” /></a> <!-- Dockerのロゴ -->
 <a><img src=“https://user-images.githubusercontent.com/39142850/71774786-37825e00-2fb8-11ea-8b90-bd652a58f1ad.png” height=“60px;” /></a> <!-- AWSのロゴ -->
-<a><img src=“https://syncer.jp/storage/web/brand-logos/static/dst/jquery-logo-001.png” height=“60px;” /></a><!--JQueryのロゴ-->
+<a><img src=“https://assets.brandfolder.com/otz73u-2kwjjs-3sbkgf/v/799652/view@2x.png?v=1592401195” height=“60px;” /></a> <!-- CircleCIのロゴ -->
 ---
-
 <br>
-
-## 機能
-- ユーザー管理機能
-- レシピ投稿機能
-- レシピ詳細機能
-- ユーザー詳細機能
-- 投稿編集削除機能
-- お気に入り機能
-
-## 使い方
-- 新規会員登録・ログインをすると、レシピの投稿、閲覧ができます。
-- 新規会員登録、ログインがお済みでない方も料理の画像や概要を閲覧することが可能です。
-- 投稿方法「レシピを投稿する」ボタンから投稿ページに遷移、項目に沿って入力し投稿ボタンをクリック。
-- マイページ閲覧、画面右上のユーザーネームをクリック、名前、プロフィール、投稿したレシピ一覧が表示されます。
-- レシピ詳細閲覧、レシピ一覧からお気に入りのレシピをクリックすると作り方、材料などの詳細を閲覧できます。
-- お気に入り、レシピ一にあるハートマークをクリックする事でお気に入り登録できます。画面右上の「お気に入り一覧」ボタンでお気に入りの一覧を見ることが可能です。
-- ホーム画面（レシピ一覧画面）への遷移、画面左上の「Share Recipe」のロゴをクリックするとホーム画面に遷移する事ができます。
-
+<img width=“1440" alt=“スクリーンショット 2020-10-16 10 40 31” src=“https://i.gyazo.com/8691aba83173c39626779080dabb3399.png”>
+## 機能紹介
+- 新規会員登録・ログインをすると、用語の参照先URLを投稿できます。
+- 新規会員登録、ログインがお済みでない方も用語一覧や詳細は閲覧できます。
+## サイトURL紹介
+デプロイ:AWS
+- アドレス:https://rails-connect.com/
+デプロイ:Heroku
+- アドレス:https://rails-connect-app.herokuapp.com/
 ## テスト用アカウント
 1.マスター用
 - email: master_user@gmail.com
@@ -45,68 +39,91 @@
 2.閲覧用
 - email: test_user@gmail.com
 - password: test0000
-
-
+3.ゲストユーザー
+- ゲストログイン機能
+- 登録のお手間を省きログインして頂けます。
+## :globe_with_meridians: インストール方法
+1.このリポジトリを複製<br>
+`$ git clone https://github.com/xfm04x/rails-connect.git`
+2.インストールしたリポジトリに移動<br>
+`$ cd rails-connect.git`
+3.gemをアプリケーションに適用<br>
+`$ bundle install`<br>
+4.DBの作成&反映<br>
+`$ rails db:create`<br>
+`$ rails db:migrate`<br>
+5.カテゴリ一覧の反映<br>
+`$ rails db:seed`<br>
+6.アプリケーションの起動<br>
+`$ rails s`<br>
+:point_right:`http://localhost:3000`
+***デモ(投稿)***
+![デモ](https://i.gyazo.com/476bb4ad97bb5d264a89e384a28eab47.gif)
+***デモ(検索）***
+![デモ](https://i.gyazo.com/9c8e6bccc2cf7fb582e626fdc150bf8b.gif)
+## 機能
+- ユーザー管理機能
+- ゲストユーザー機能(ゲストの方にお手間を取らせない為)
+- 用語投稿機能
+- URLアクセス機能(投稿したURLから直接参照先へアクセスする為)
+- 詳細閲覧機能
+- 投稿編集削除機能
+- ジャンル別閲覧機能
+- 検索機能
+- いいね機能(投稿者を評価する為)
 ## 使用技術
-1. AWS/本番環境（EC2, S3）
-2. MySQL
-3. puma
-4. JQuery
-5. Ruby 2.6.5, Rails 6.0.3.3
-6. Mac Catalina(10.15.6)
-7. VSCode
-
-# テーブル設計
-
-## users テーブル
-
-| Column           | Type   | Options     |
-| -----------------| ------ | ----------- |
-| name             | string | null: false |
-| profile          | text   | 
-| email            | string | null: false |
-| password         | string | null: false |
-
+1. AWS/本番環境（EC2, ACM, VPC, EIP, IAM, Route53）
+2. Docker,Docker-compose（開発環境）
+3. CircleCI（デプロイ）
+5. MySQL
+6. puma
+7. Javascript
+8. Ruby 2.6.5, Rails 6.0.3.3
+9. Mac Catalina(10.15.6)
+10. Amazon Linux
+11. VSCode, Vim
+## 追加実装予定
+1. AWS/本番環境（S3）
+2. CircleCI（テスト）
+3. RSpec（テストフレームワーク）
+---
+# :page_facing_up: DB設計
+## ER図
+![er](https://i.gyazo.com/94939feb0bebbf9f2aa62d55a7ca4e97.png)
+## userテーブル
+|種類        | Column     | Type       | Options      |追記           |
+|-----------|------------|-------------|--------------|--------------|
+|ニックネーム|nickname|string|null: false||
+|メールアドレス|email|string|null: false||
+|パスワード|password|text|null: false||
 ### Association
-
-- has_many :recipes
-- has_many :likes, dependent: :destroy
-
-
-## recipes テーブル
-
-| Column              | Type      | Options     |
-|  -----------------  | --------- | ----------- |
-| name                | string    | null: false |
-| outline             | text      |  
-| category_id         | integer   | null: false |
-| foodstuff           | text      | null: false |
-| cook                | text      | null: false |
-| user_id             | references| null: false,foreign_key: true |
-| likes_count         | integer   | 
-
-
+* has_many :terms, foreign_key: :user_id, dependent: :destroy
+* has_many :likes
+<br>
+## termテーブル
+|種類        | Column     | Type       | Options      |追記           |
+|-----------|------------|-------------|--------------|--------------|
+|用語|title|string|null: false||
+|引用先|reference|string|null: false||
+|URL|text|text|null: false||
+|ジャンル|genre_id|integer|null: false|Active_hash|
+|ユーザーID|user|references|null: false|foreign_key: true|
 ### Association
-- belongs_to :user
-- has_many :likes, dependent: :destroy
-
-
-## likes テーブル
-
-| Column      | Type   | Options     |
-| ------------| ------ | ----------- |
-| user_id     | integer   | 
-| recipe_id   | integer   | 
-
-
+* belongs_to_active_hash :genre
+* belongs_to :user
+* has_many :likes
+<br>
+## likeテーブル
+|種類        | Column     | Type       | Options      |追記           |
+|-----------|------------|-------------|--------------|--------------|
+|ユーザーID|user_id|integer|||
+|用語ID|term_id|integer|||
 ### Association
-
-- has_many :recipes
-- has_many :users
-
+* belongs_to :user
+* belongs_to :term
+<br>
 ---
 ## 作者
 ---
-[Rikuto Kita]()
-mail to: o83.kita.rikuto@gmail.com
-
+[Fumiya Matsuno]()
+mail to: xfmakma@gmail.com
