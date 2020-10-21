@@ -7,10 +7,9 @@
 - 作成期間 2020/10/13 ~ 2020/10/21
 -Elastic IP アドレス:54.95.106.48
 <br>
+
 ---
-
 ## :paperclip: 主な使用言語
-
 ---
 <a><img src=“https://user-images.githubusercontent.com/39142850/71774533-1ddf1780-2fb4-11ea-8560-753bed352838.png” width=“70px;” /></a> <!-- rubyのロゴ -->
 <a><img src=“https://user-images.githubusercontent.com/39142850/71774548-731b2900-2fb4-11ea-99ba-565546c5acb4.png” height=“60px;” /></a> <!-- RubyOnRailsのロゴ -->
@@ -20,6 +19,7 @@
 <a><img src=“https://user-images.githubusercontent.com/39142850/71774786-37825e00-2fb8-11ea-8b90-bd652a58f1ad.png” height=“60px;” /></a> <!-- AWSのロゴ -->
 <a><img src=“https://syncer.jp/storage/web/brand-logos/static/dst/jquery-logo-001.png” height=“60px;” /></a><!--JQueryのロゴ-->
 ---
+
 <br>
 
 ## 機能
