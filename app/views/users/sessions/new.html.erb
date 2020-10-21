@@ -14,6 +14,10 @@
           <div class ="log-in">
 
               <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                <div class='login-flash-message'>
+                  <%= flash[:notice] %>
+                  <%= flash[:alert] %>
+                </div>
 
                 <div class="field">
                   <%= f.label :メールアドレス %><br />

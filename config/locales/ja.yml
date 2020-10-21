@@ -1,0 +1,11 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       name: 名前
+     recipe:
+       image: 写真
+       name: 名前
+       foodstuff: 材料
+       cook: 作り方
+       category_id: カテゴリー

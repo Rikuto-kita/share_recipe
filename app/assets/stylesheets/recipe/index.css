@@ -53,8 +53,9 @@
   height:200px ;
 }
 
-.recipe-name{
-  width: 300px;
+.recipe-info{
+ font-size: 20px;
+ font-weight: 600;
 }
 
 .recipe-outline{
