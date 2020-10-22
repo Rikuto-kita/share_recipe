@@ -29,6 +29,7 @@
               <span><%= recipe.outline %>
             </div>
             </div>
+            <%= render partial: 'recipes/recipes', locals:{recipe: recipe} , as: :recipe %>
         </li>
           <% end %>
       </ul>
